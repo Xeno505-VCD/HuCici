@@ -4,7 +4,7 @@ html.showcase-card body {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  background: #080718 url("./assets/violet-starfield.png") center / cover no-repeat !important;
+  background: transparent !important;
 }
 
 html.showcase-card header,
@@ -29,5 +29,9 @@ html.showcase-card #stage {
   height: 100dvh;
   min-height: 0;
   max-height: none;
+  background: transparent !important;
+}
+
+html.showcase-card #stage canvas {
   background: transparent !important;
 }

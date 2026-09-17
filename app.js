@@ -7,7 +7,7 @@
       id: 'bird-meerkat',
       title: 'BIRD / MEERKAT',
       mode: 'lenticular',
-      src: './cards/bird/index.html?rev=20260917-collection&embed=archive',
+      src: './cards/bird/index.html?rev=20260917-starfield-fix&embed=archive',
     },
     { id: 'tiger-holo', title: 'TIGER HOLO', mode: 'holo', src: './cards/tiger/index.html?rev=20260917-collection&embed=archive' },
     { id: 'feathered-portrait', title: 'FEATHERED PORTRAIT', mode: 'holo', src: './cards/feathered/index.html?rev=20260917-collection&embed=archive' },
@@ -15,7 +15,6 @@
     { id: 'niulai-mama', title: 'NIULAI · MAMA~', mode: 'holo', src: './cards/mama/index.html?rev=20260917-collection&embed=archive' },
     { id: 'bubbly', title: 'BUBBLY', mode: 'holo', src: './cards/bubbly/index.html?rev=20260917-collection&embed=archive' },
     { id: 'milk-dragon', title: 'MILK DRAGON · BOBO', mode: 'holo', src: './cards/milk-dragon/index.html?rev=20260917-collection&embed=archive' },
-    { id: 'mech-web', title: 'MECH WEB', mode: 'holo', src: './cards/mech-web/index.html?rev=20260917-collection&embed=archive' },
     { id: 'inverted-strike', title: 'INVERTED STRIKE', mode: 'holo', src: './cards/inverted-strike/index.html?rev=20260917-collection&embed=archive' },
   ];
 
@@ -191,7 +190,7 @@
     if (frameDocument.querySelector('[data-gallery-showcase]')) return Promise.resolve();
     const stylesheet = frameDocument.createElement('link');
     stylesheet.rel = 'stylesheet';
-    stylesheet.href = new URL(`./showcase-${card.mode}.css?rev=20260917-collection`, window.location.href).href;
+    stylesheet.href = new URL(`./showcase-${card.mode}.css?rev=20260917-starfield-fix`, window.location.href).href;
     stylesheet.dataset.galleryShowcase = '';
     return new Promise((resolve) => {
       let finished = false;
