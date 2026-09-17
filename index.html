@@ -13,7 +13,7 @@
         window.location.replace(preview.href);
       }
     </script>
-    <link rel="stylesheet" href="./style.css?rev=20260917-glass-navigation" />
+    <link rel="stylesheet" href="./style.css?rev=20260917-dual-filament" />
   </head>
   <body>
     <header class="archive-header">
@@ -27,7 +27,10 @@
       <section class="viewer" aria-label="闪卡浏览器">
         <button class="navigation navigation-previous" id="previous" type="button" aria-label="上一张卡片">
           <span class="navigation-arrow" aria-hidden="true">
-            <svg viewBox="0 0 36 64" focusable="false"><path d="M27 5 8 32l19 27" /></svg>
+            <svg viewBox="0 0 36 64" focusable="false">
+              <path class="navigation-stroke navigation-stroke-cyan" d="M28 5 7 32l21 27" />
+              <path class="navigation-stroke navigation-stroke-violet" d="M33 7 12 32l21 25" />
+            </svg>
           </span>
           <span class="navigation-label">上一张</span>
         </button>
@@ -50,7 +53,10 @@
         <button class="navigation navigation-next" id="next" type="button" aria-label="下一张卡片">
           <span class="navigation-label">下一张</span>
           <span class="navigation-arrow" aria-hidden="true">
-            <svg viewBox="0 0 36 64" focusable="false"><path d="m9 5 19 27L9 59" /></svg>
+            <svg viewBox="0 0 36 64" focusable="false">
+              <path class="navigation-stroke navigation-stroke-cyan" d="m8 5 21 27L8 59" />
+              <path class="navigation-stroke navigation-stroke-violet" d="m3 7 21 25L3 57" />
+            </svg>
           </span>
         </button>
       </section>
