@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#fafafa" />
+    <link rel="icon" href="data:," />
+    <title>White Atelier</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script type="module" src="./app.bundle.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <a class="wordmark" href="./" aria-label="White Atelier home"
+        ><span class="wordmark-cn">WA<span class="brand-dot"></span></span
+        ><span class="wordmark-en">WHITE ATELIER</span></a
+      >
+      <span class="collection-label"
+        >PERSONAL ARCHIVE <span>/</span> <span id="edition">STUDY 001</span></span
+      >
+      <div class="header-actions">
+        <button
+          class="icon-button"
+          id="info"
+          aria-label="Artwork information"
+          title="Artwork information"
+          disabled
+        >
+          <i data-lucide="info"></i>
+        </button>
+        <button
+          class="icon-button save-button"
+          id="save"
+          aria-label="Save card image"
+          title="Save card image"
+          disabled
+        >
+          <i data-lucide="download"></i>
+        </button>
+      </div>
+    </header>
+    <main>
+      <section class="gallery" aria-label="Card stage">
+        <div
+          class="stage"
+          id="stage"
+          tabindex="0"
+          role="group"
+          aria-label="Rotatable holographic card"
+        >
+          <div id="loading" class="loading" role="status">
+            <span class="loading-line"></span><span>LOADING ARTWORK</span>
+          </div>
+        </div>
+        <div class="stage-note" aria-hidden="true">
+          <span>ART STUDY</span><span id="view-label">01 / FRONT</span>
+        </div>
+        <div class="parameter-panel" id="parameter-panel">
+          <div class="panel-heading">
+            <span>DEPTH & COMPOSITION</span>
+          </div>
+          <label class="range-row" for="scale"
+            ><span>ART SCALE</span><output id="scale-value"></output
+            ><input id="scale" type="range" min="0.95" max="1.35" step="0.01"
+          /></label>
+          <label class="range-row" for="depth"
+            ><span>SUBJECT DEPTH</span><output id="depth-value"></output
+            ><input id="depth" type="range" min="-0.45" max="0.45" step="0.01"
+          /></label>
+          <label class="range-row" for="fx-depth"
+            ><span>FOIL DEPTH</span><output id="fx-depth-value"></output
+            ><input id="fx-depth" type="range" min="-0.3" max="0.9" step="0.01"
+          /></label>
+          <label class="range-row" for="bg-depth"
+            ><span>GROUND DEPTH</span><output id="bg-depth-value"></output
+            ><input id="bg-depth" type="range" min="-0.4" max="0.4" step="0.01"
+          /></label>
+        </div>
+      </section>
+      <section class="artwork-bar" aria-label="Artwork and finish">
+        <div class="artwork-title">
+          <div class="title-line">
+            <h1 id="card-title">BOND</h1>
+            <span id="subtitle">POLARIZED RELIEF</span>
+          </div>
+          <p id="description">Light shifts with every angle.</p>
+        </div>
+        <div class="face-picker" role="group" aria-label="Card face">
+          <button id="front" aria-pressed="true" disabled>FRONT</button
+          ><button id="back" aria-pressed="false" disabled>BACK</button>
+        </div>
+        <div class="finish-cluster">
+          <button
+            id="depth-toggle"
+            class="depth-toggle"
+            type="button"
+            aria-controls="parameter-panel"
+            aria-expanded="true"
+            aria-label="Show or hide depth controls"
+            title="Show or hide depth controls"
+          >
+            <i data-lucide="sliders-horizontal"></i><span>DEPTH</span>
+          </button>
+          <div class="finish-control">
+          <div class="finish-heading">
+            <span>CARD FINISH</span>
+            <div class="swatches" role="group" aria-label="Card finish">
+              <button
+                class="swatch pearl"
+                data-finish="pearl"
+                aria-pressed="true"
+                aria-label="Pearl"
+                title="Pearl"
+                disabled
+              ></button
+              ><button
+                class="swatch silver"
+                data-finish="silver"
+                aria-pressed="false"
+                aria-label="Silver"
+                title="Silver"
+                disabled
+              ></button
+              ><button
+                class="swatch gold"
+                data-finish="gold"
+                aria-pressed="true"
+                aria-label="Gold"
+                title="Gold"
+                disabled
+              ></button
+              ><button
+                class="swatch original"
+                data-finish="original"
+                aria-pressed="false"
+                aria-label="Original"
+                title="Original"
+                disabled
+              ></button>
+            </div>
+            <span id="finish-name">Gold</span>
+          </div>
+          <label class="foil-row" for="foil"
+            ><span>FOIL</span
+            ><input
+              id="foil"
+              type="range"
+              min="0"
+              max="1"
+              step="0.01"
+              value="0.52"
+              disabled
+            /><output id="foil-value">52%</output></label
+          >
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <span>LIGHT SHIFTS. DEPTH ANSWERS.</span><span>PERSONAL ART COLLECTION</span>
+    </footer>
+    <dialog id="about" aria-labelledby="about-title">
+      <button
+        id="close-about"
+        class="icon-button modal-close"
+        aria-label="Close artwork information"
+        title="Close artwork information"
+      >
+        <i data-lucide="x"></i>
+      </button>
+      <p class="dialog-mark">WHITE ATELIER</p>
+      <h2 id="about-title">POLARIZED RELIEF</h2>
+      <p id="about-description"></p>
+      <dl>
+        <div>
+          <dt>SOURCE</dt>
+          <dd>User-provided reference artwork</dd>
+        </div>
+        <div>
+          <dt>FORMAT</dt>
+          <dd>Interactive 3D card study</dd>
+        </div>
+        <div>
+          <dt>EDITION</dt>
+          <dd id="about-edition">STUDY 001</dd>
+        </div>
+      </dl>
+    </dialog>
+    <div id="notice" role="status" class="notice" hidden></div>
+    <script type="module" src="./app.bundle.js"></script>
+  </body>
+</html>

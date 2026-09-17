@@ -1,0 +1,40 @@
+/* Gallery-only presentation: the card remains interactive but all studio chrome is removed. */
+html.showcase-card,
+html.showcase-card body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #080718 url("./assets/violet-starfield.png") center / cover no-repeat !important;
+}
+
+html.showcase-card .masthead,
+html.showcase-card .artwork-bar,
+html.showcase-card .footer,
+html.showcase-card .stage-note,
+html.showcase-card .parameter-panel,
+html.showcase-card .tools,
+html.showcase-card dialog,
+html.showcase-card .notice {
+  display: none !important;
+}
+
+html.showcase-card main,
+html.showcase-card .gallery,
+html.showcase-card .stage {
+  width: 100%;
+  height: 100dvh;
+  min-height: 0;
+  max-height: none;
+  margin: 0;
+  padding: 0;
+}
+
+html.showcase-card .stage {
+  inset: 0;
+  background: transparent !important;
+}
+
+html.showcase-card .stage:focus,
+html.showcase-card .stage:focus-visible {
+  outline: none !important;
+}

@@ -1,0 +1,33 @@
+/* Gallery-only presentation: retain the renderer and drag interaction, hide its studio UI. */
+html.showcase-card,
+html.showcase-card body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #080718 url("./assets/violet-starfield.png") center / cover no-repeat !important;
+}
+
+html.showcase-card header,
+html.showcase-card aside,
+html.showcase-card footer,
+html.showcase-card .hint,
+html.showcase-card dialog {
+  display: none !important;
+}
+
+html.showcase-card main {
+  display: block;
+  width: 100%;
+  max-width: none;
+  height: 100dvh;
+  margin: 0;
+  padding: 0;
+}
+
+html.showcase-card #stage {
+  width: 100%;
+  height: 100dvh;
+  min-height: 0;
+  max-height: none;
+  background: transparent !important;
+}

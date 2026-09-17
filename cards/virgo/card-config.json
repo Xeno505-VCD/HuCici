@@ -1,0 +1,52 @@
+{
+  "title": "处女座生日蛋糕",
+  "subtitle": "VIRGO BIRTHDAY CAKE",
+  "technique": "天天开心 · 心想事成 · 生日快乐",
+  "tagline": "愿每一层甜蜜，都成为生日的闪光时刻",
+  "edition": "001 / 001",
+  "collection": "处女座生日典藏",
+  "description": "蓝紫生日光幕里，三层水果蛋糕与小木凳形成第二层景深；祝福艺术字、生日丝带和四枚贴纸悬于最外层；翻转后展示金色处女座星图。",
+  "sourceMode": "relief",
+  "font": "C:/Windows/Fonts/msyhbd.ttc",
+  "backImage": "./assets/back.png",
+  "assets": {
+    "subject": "./assets/subject.png",
+    "background": "./assets/background.png",
+    "text": "./assets/text.png",
+    "lineart": "./assets/lineart.png",
+    "model": "./assets/card.glb"
+  },
+  "parameters": {
+    "subjectScale": 0.96,
+    "subjectDepth": 0.55,
+    "backgroundDepth": -0.4,
+    "effectsScale": 1.0,
+    "effectsDepth": 0.43,
+    "foil": 0.72
+  },
+  "layers": {
+    "subject": {
+      "width": 6.3,
+      "height": 9.45,
+      "depth": 0.55,
+      "offset": [
+        0,
+        0
+      ]
+    },
+    "text": {
+      "depth": 0.78
+    }
+  },
+  "safeArea": {
+    "scale": 1.0,
+    "offset": [
+      0,
+      0
+    ]
+  },
+  "appearance": {
+    "finish": "pearl",
+    "background": "#dfe7ff"
+  }
+}

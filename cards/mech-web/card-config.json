@@ -1,0 +1,61 @@
+{
+  "title": "MECH WEB",
+  "subtitle": "SILVER WEB // POLARIZED ARCHIVE",
+  "technique": "QUAD-HUNT / POLAR SHIFT",
+  "tagline": "Cyan-violet interference tracks the silver crest and blades.",
+  "edition": "001 / 002",
+  "collection": "SPIDER MECH RELIEF SERIES",
+  "description": "A deep-relief study of the silver crest, armor and mechanical limbs.",
+  "font": "C:\\Windows\\Fonts\\msyh.ttc",
+  "sourceMode": "relief",
+  "assets": {
+    "model": "./assets/card.glb",
+    "subject": "./assets/subject.png",
+    "background": "./assets/background.png",
+    "text": "./assets/text.png",
+    "lineart": "./assets/lineart.png",
+    "effects": "./assets/effects.png"
+  },
+  "parameters": {
+    "subjectScale": 1.0,
+    "subjectDepth": 0.44,
+    "backgroundDepth": -0.34,
+    "effectsScale": 1.0,
+    "effectsDepth": 0.8,
+    "foil": 1.0
+  },
+  "safeArea": {
+    "scale": 1.0,
+    "offset": [
+      0.0,
+      0.0
+    ]
+  },
+  "layers": {
+    "subject": {
+      "width": 6.3,
+      "height": 9.45,
+      "offset": [
+        0,
+        0
+      ],
+      "depth": 0.44
+    },
+    "effects": {
+      "width": 6.3,
+      "height": 9.45,
+      "offset": [
+        0,
+        0
+      ],
+      "depth": 0.8
+    },
+    "text": {
+      "depth": 0.92
+    }
+  },
+  "appearance": {
+    "background": "#020409",
+    "finish": "silver"
+  }
+}

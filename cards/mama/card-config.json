@@ -1,0 +1,36 @@
+{
+  "title": "mama~",
+  "subtitle": "荒漠回声",
+  "technique": "长风伫立",
+  "tagline": "向着落日，慢慢长大",
+  "edition": "003 / 004",
+  "collection": "云端表情闪卡",
+  "description": "高大低多边形牛来闪卡。",
+  "font": "C:/Windows/Fonts/msyh.ttc",
+  "assets": {
+    "subject": "./assets/subject.png",
+    "background": "./assets/background.png",
+    "text": "./assets/text.png",
+    "lineart": "./assets/lineart.png",
+    "effects": "./assets/effects.png",
+    "model": "./assets/card.glb"
+  },
+  "parameters": {
+    "subjectScale": 1.05,
+    "subjectDepth": -0.45,
+    "backgroundDepth": -0.4,
+    "effectsScale": 1,
+    "effectsDepth": -0.3,
+    "foil": 1.0
+  },
+  "safeArea": {
+    "scale": 1.12,
+    "offset": [
+      -0.06,
+      -0.085
+    ]
+  },
+  "appearance": {
+    "finish": "gold"
+  }
+}

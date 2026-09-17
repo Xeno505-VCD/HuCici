@@ -1,0 +1,36 @@
+{
+  "title": "奶龙啵啵",
+  "subtitle": "果冻黄昏",
+  "technique": "抬手卖萌",
+  "tagline": "今天也软乎乎",
+  "edition": "002 / 004",
+  "collection": "云端表情闪卡",
+  "description": "奶龙果冻场景闪卡。",
+  "font": "C:/Windows/Fonts/msyh.ttc",
+  "assets": {
+    "subject": "./assets/subject.png",
+    "background": "./assets/background.png",
+    "text": "./assets/text.png",
+    "lineart": "./assets/lineart.png",
+    "effects": "./assets/effects.png",
+    "model": "./assets/card.glb"
+  },
+  "parameters": {
+    "subjectScale": 1.11,
+    "subjectDepth": 0.4,
+    "backgroundDepth": -0.25,
+    "effectsScale": 1,
+    "effectsDepth": 0.62,
+    "foil": 1.0
+  },
+  "safeArea": {
+    "scale": 1.12,
+    "offset": [
+      -0.06,
+      -0.085
+    ]
+  },
+  "appearance": {
+    "finish": "gold"
+  }
+}

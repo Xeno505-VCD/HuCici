@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#080718" />
+    <title>HuCici · HOLO CARD ARCHIVE</title>
+    <script>
+      if (window.location.protocol === 'file:') {
+        const preview = new URL('http://127.0.0.1:4174/');
+        preview.search = window.location.search;
+        preview.hash = window.location.hash;
+        window.location.replace(preview.href);
+      }
+    </script>
+    <link rel="stylesheet" href="./style.css?rev=20260917-glass-navigation" />
+  </head>
+  <body>
+    <header class="archive-header">
+      <p class="archive-kicker">HOLO CARD ARCHIVE</p>
+      <div class="archive-heading">
+        <h1 id="card-name">载入卡片中</h1>
+        <p id="card-position" aria-live="polite">01 / 10</p>
+      </div>
+    </header>
+    <main class="archive-main">
+      <section class="viewer" aria-label="闪卡浏览器">
+        <button class="navigation navigation-previous" id="previous" type="button" aria-label="上一张卡片">
+          <span class="navigation-arrow" aria-hidden="true">
+            <svg viewBox="0 0 36 64" focusable="false"><path d="M27 5 8 32l19 27" /></svg>
+          </span>
+          <span class="navigation-label">上一张</span>
+        </button>
+        <div class="frame-wrap">
+          <div class="frame-loading" id="frame-loading" role="status">
+            <div class="loading-panel">
+              <span class="loading-sigil" aria-hidden="true">✦</span>
+              <span class="loading-title">正在读取卡片资源</span>
+              <div class="loading-progress" id="loading-progress" role="progressbar" aria-label="卡片加载进度" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                <span class="loading-progress-fill" id="loading-progress-fill"></span>
+              </div>
+              <div class="loading-details">
+                <small id="loading-stage">PREPARING ARCHIVE</small>
+                <output id="loading-value">0%</output>
+              </div>
+            </div>
+          </div>
+          <div class="frame-stack" id="frame-stack"></div>
+        </div>
+        <button class="navigation navigation-next" id="next" type="button" aria-label="下一张卡片">
+          <span class="navigation-label">下一张</span>
+          <span class="navigation-arrow" aria-hidden="true">
+            <svg viewBox="0 0 36 64" focusable="false"><path d="m9 5 19 27L9 59" /></svg>
+          </span>
+        </button>
+      </section>
+    </main>
+    <footer class="archive-footer">
+      <p>保留卡片拖动、倾斜与翻面交互</p>
+      <p class="mobile-hint">使用两侧箭头切换卡片</p>
+    </footer>
+    <script src="./app.js?rev=20260917-frame-cache"></script>
+  </body>
+</html>

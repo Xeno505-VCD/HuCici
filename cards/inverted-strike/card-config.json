@@ -1,0 +1,61 @@
+{
+  "title": "INVERTED STRIKE",
+  "subtitle": "IRON DESCENT // POLARIZED ARCHIVE",
+  "technique": "MECH HUNT / COLD PULSE",
+  "tagline": "Directional foil follows the joints, blades and red armor.",
+  "edition": "002 / 002",
+  "collection": "SPIDER MECH RELIEF SERIES",
+  "description": "An inverted strike framed by four mechanical limbs over a cold blue city.",
+  "font": "C:\\Windows\\Fonts\\msyh.ttc",
+  "sourceMode": "relief",
+  "assets": {
+    "model": "./assets/card.glb",
+    "subject": "./assets/subject.png",
+    "background": "./assets/background.png",
+    "text": "./assets/text.png",
+    "lineart": "./assets/lineart.png",
+    "effects": "./assets/effects.png"
+  },
+  "parameters": {
+    "subjectScale": 0.92,
+    "subjectDepth": 0.32,
+    "backgroundDepth": 0.4,
+    "effectsScale": 1.0,
+    "effectsDepth": 0.8,
+    "foil": 1.0
+  },
+  "safeArea": {
+    "scale": 1.0,
+    "offset": [
+      0.0,
+      0.0
+    ]
+  },
+  "layers": {
+    "subject": {
+      "width": 6.3,
+      "height": 9.45,
+      "offset": [
+        0,
+        0
+      ],
+      "depth": 0.32
+    },
+    "effects": {
+      "width": 6.3,
+      "height": 9.45,
+      "offset": [
+        0,
+        0
+      ],
+      "depth": 0.8
+    },
+    "text": {
+      "depth": 0.92
+    }
+  },
+  "appearance": {
+    "background": "#030c18",
+    "finish": "gold"
+  }
+}

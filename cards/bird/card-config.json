@@ -1,0 +1,42 @@
+{
+  "mode": "lenticular",
+  "title": "小鸭 · 狐獴",
+  "subtitle": "彩色刮板画翻折光栅",
+  "technique": "极光水面",
+  "tagline": "倾斜切换两幅完整画面",
+  "edition": "001",
+  "collection": "彩色刮板画典藏",
+  "description": "小鸭与狐獴的整面翻折光栅卡。",
+  "states": {
+    "a": {
+      "label": "小鸭",
+      "caption": "彩色刮刻 · 极光水面"
+    },
+    "b": {
+      "label": "狐獴",
+      "caption": "彩色刮刻 · 极光水面"
+    }
+  },
+  "lenticular": {
+    "flipAngle": 18,
+    "softness": 0.22,
+    "pitch": 120,
+    "stripe": 0.22,
+    "sweep": 4,
+    "refract": 0.3,
+    "ridge": 0.5,
+    "depth": 0.03,
+    "foil": 1.0,
+    "cycle": false
+  },
+  "effects": {
+    "particles": 1.0,
+    "glow": 0.85
+  },
+  "assets": {
+    "model": "./assets/card.glb",
+    "imageA": "./assets/image_a.png",
+    "imageB": "./assets/image_b.png",
+    "text": "./assets/text.png"
+  }
+}

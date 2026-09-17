@@ -1,0 +1,36 @@
+{
+  "title": "BUBBLY",
+  "subtitle": "派对开场",
+  "technique": "飞扑上场",
+  "tagline": "闪闪发光的好心情",
+  "edition": "004 / 004",
+  "collection": "云端表情闪卡",
+  "description": "橙白柯基派对闪卡。",
+  "font": "C:/Windows/Fonts/msyh.ttc",
+  "assets": {
+    "subject": "./assets/subject.png",
+    "background": "./assets/background.png",
+    "text": "./assets/text.png",
+    "lineart": "./assets/lineart.png",
+    "effects": "./assets/effects.png",
+    "model": "./assets/card.glb"
+  },
+  "parameters": {
+    "subjectScale": 1.1,
+    "subjectDepth": -0.09,
+    "backgroundDepth": -0.25,
+    "effectsScale": 1,
+    "effectsDepth": 0.66,
+    "foil": 1.0
+  },
+  "safeArea": {
+    "scale": 1.12,
+    "offset": [
+      -0.06,
+      -0.085
+    ]
+  },
+  "appearance": {
+    "finish": "gold"
+  }
+}

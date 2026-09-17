@@ -1,0 +1,294 @@
+:root {
+  color: #f3edff;
+  background: #080718;
+  font-family: "Microsoft YaHei", "Noto Sans SC", system-ui, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html, body { height: 100%; margin: 0; }
+
+body {
+  min-height: 100%;
+  overflow: hidden;
+  background: #080718 url("./assets/violet-starfield.png") center / cover no-repeat;
+}
+
+button { font: inherit; }
+
+.archive-header {
+  position: fixed;
+  z-index: 4;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: max-content;
+  max-width: calc(100vw - 116px);
+  padding: 7px 12px;
+  border: 1px solid rgb(214 212 203 / 88%);
+  border-radius: 999px;
+  background: rgb(250 249 245 / 82%);
+  box-shadow: 0 3px 16px rgb(32 31 25 / 9%);
+  backdrop-filter: blur(10px);
+  pointer-events: none;
+  display: none;
+}
+
+.archive-kicker, .archive-heading p, .archive-footer p { margin: 0; }
+
+.archive-kicker {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .16em;
+  color: #74736d;
+}
+
+.archive-heading { display: flex; align-items: baseline; gap: 16px; }
+
+.archive-heading h1 {
+  max-width: min(62vw, 560px);
+  margin: 0;
+  overflow: hidden;
+  color: #161615;
+  font-size: 14px;
+  font-weight: 650;
+  line-height: 1.2;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.archive-heading p { color: #74736d; font-size: 12px; letter-spacing: .08em; white-space: nowrap; }
+
+.archive-main { height: 100dvh; }
+
+.viewer {
+  position: relative;
+  height: 100%;
+  isolation: isolate;
+}
+
+.viewer::after { display: none; }
+
+.frame-wrap {
+  position: relative;
+  min-width: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border: 0;
+  border-radius: 0;
+  background: #080718 url("./assets/violet-starfield.png") center / cover no-repeat;
+  box-shadow: none;
+}
+
+.frame-stack { position: absolute; inset: 0; z-index: 1; }
+.card-frame {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background: transparent;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 180ms ease;
+}
+.card-frame.is-ready.is-active { opacity: 1; pointer-events: auto; }
+
+.frame-loading {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  align-content: center;
+  color: #dac8ff;
+  font-family: "Palatino Linotype", "Songti SC", "STSong", serif;
+  background: rgb(8 7 24 / 92%) url("./assets/violet-starfield.png") center / cover no-repeat;
+  transition: opacity 260ms ease;
+}
+
+.frame-loading.is-hidden { opacity: 0; pointer-events: none; }
+
+.loading-panel {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  width: min(360px, calc(100vw - 72px));
+  padding: 22px 24px 20px;
+  border: 1px solid rgb(226 212 255 / 30%);
+  border-radius: 22px;
+  background: linear-gradient(145deg, rgb(36 25 68 / 58%), rgb(9 8 30 / 38%));
+  box-shadow: 0 24px 80px rgb(0 0 0 / 34%), 0 0 0 1px rgb(255 255 255 / 6%) inset;
+  backdrop-filter: blur(24px) saturate(145%);
+  -webkit-backdrop-filter: blur(24px) saturate(145%);
+}
+
+.loading-sigil {
+  grid-column: 1 / -1;
+  margin-bottom: 14px;
+  color: #b98cff;
+  font-family: Georgia, serif;
+  font-size: 24px;
+  line-height: 1;
+  text-align: center;
+  text-shadow: 0 0 20px rgb(185 140 255 / 92%);
+}
+
+.loading-title {
+  grid-column: 1 / -1;
+  margin-bottom: 18px;
+  color: #f5efff;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: .14em;
+  text-align: center;
+}
+
+.loading-progress {
+  position: relative;
+  grid-column: 1 / -1;
+  height: 5px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: rgb(255 255 255 / 13%);
+  box-shadow: 0 0 0 1px rgb(255 255 255 / 6%) inset;
+}
+
+.loading-progress-fill {
+  display: block;
+  width: 0%;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #8663ec, #d7b8ff 55%, #f4ecff);
+  box-shadow: 0 0 16px rgb(197 157 255 / 80%);
+  transition: width 180ms ease-out;
+}
+
+.loading-details {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 18px;
+  margin-top: 12px;
+}
+
+.loading-details small {
+  color: rgb(211 187 255 / 70%);
+  font-family: Georgia, serif;
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: .22em;
+}
+
+.loading-details output {
+  min-width: 42px;
+  color: #f7f1ff;
+  font: 500 12px/1 Georgia, serif;
+  letter-spacing: .08em;
+  text-align: right;
+}
+
+.navigation {
+  position: fixed;
+  z-index: 5;
+  top: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 62px;
+  min-width: 62px;
+  height: 154px;
+  padding: 0;
+  border: 1px solid rgb(239 228 255 / 32%);
+  border-radius: 31px;
+  color: #f6efff;
+  background: linear-gradient(145deg, rgb(132 104 180 / 18%), rgb(12 10 36 / 28%));
+  box-shadow: 0 0 0 1px rgb(255 255 255 / 7%) inset, 0 16px 44px rgb(0 0 0 / 26%);
+  backdrop-filter: blur(24px) saturate(150%);
+  -webkit-backdrop-filter: blur(24px) saturate(150%);
+  cursor: pointer;
+  touch-action: manipulation;
+  opacity: .82;
+  transform: translateY(-50%);
+  transition: opacity 180ms ease, transform 180ms ease, border-color 180ms ease, background 180ms ease, box-shadow 180ms ease;
+}
+
+.navigation-previous { left: clamp(14px, 3vw, 48px); }
+.navigation-next { right: clamp(14px, 3vw, 48px); }
+
+.navigation::before {
+  position: absolute;
+  inset: 1px 8px auto;
+  height: 38%;
+  border-radius: inherit;
+  background: linear-gradient(180deg, rgb(255 255 255 / 16%), transparent);
+  content: "";
+  pointer-events: none;
+}
+.navigation:hover { border-color: rgb(243 232 255 / 65%); background: linear-gradient(145deg, rgb(150 113 205 / 28%), rgb(20 14 54 / 42%)); box-shadow: 0 0 0 1px rgb(255 255 255 / 12%) inset, 0 0 34px rgb(166 103 255 / 34%), 0 18px 48px rgb(0 0 0 / 34%); opacity: 1; }
+.navigation-previous:hover { transform: translate(-3px, -50%); }
+.navigation-next:hover { transform: translate(3px, -50%); }
+.navigation:active { transform: translateY(-50%) scale(.95); }
+.navigation:disabled { cursor: default; opacity: .42; }
+.navigation-arrow {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+}
+.navigation-arrow svg { width: 31px; height: 58px; overflow: visible; }
+.navigation-arrow path {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.45;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  filter: drop-shadow(0 0 8px rgb(224 204 255 / 52%));
+}
+.navigation-label { display: none; }
+
+.archive-footer {
+  position: fixed;
+  z-index: 4;
+  right: 12px;
+  bottom: 10px;
+  display: none;
+  padding: 7px 10px;
+  border: 1px solid rgb(214 212 203 / 88%);
+  border-radius: 999px;
+  background: rgb(250 249 245 / 82%);
+  box-shadow: 0 3px 16px rgb(32 31 25 / 9%);
+  backdrop-filter: blur(10px);
+  color: #74736d;
+  font-size: 12px;
+  pointer-events: none;
+  display: none;
+}
+
+.mobile-hint { display: none; }
+
+@media (max-width: 680px) {
+  .archive-header { top: 8px; max-width: calc(100vw - 108px); padding: 6px 10px; }
+  .archive-kicker { display: none; }
+  .archive-heading { gap: 9px; }
+  .archive-heading h1 { max-width: calc(100vw - 165px); font-size: 13px; }
+  .navigation {
+    width: 46px;
+    min-width: 46px;
+    height: 120px;
+    border-radius: 23px;
+    opacity: .86;
+  }
+  .navigation-previous { left: max(7px, env(safe-area-inset-left)); }
+  .navigation-next { right: max(7px, env(safe-area-inset-right)); }
+  .navigation-arrow svg { width: 25px; height: 48px; }
+  .loading-panel { width: min(320px, calc(100vw - 48px)); padding: 20px; border-radius: 19px; }
+  .archive-footer { display: none; font-size: 11px; }
+  .archive-footer > :first-child { display: none; }
+  .mobile-hint { display: block; text-align: right; }
+}
